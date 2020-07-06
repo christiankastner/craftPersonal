@@ -88,11 +88,10 @@
       </section>
 
         <section class="projects" id="projects">
-            <ul id="project-list">
-            {% for project in entry.projects %}
-            
+            <ul>
+            {% for block in matrixBlocks %}
                 <li>
-                    {% include '_projects/' ~ project.type %}
+                  {{ block}}
                 </li>
             {% endfor %}
             </ul>
