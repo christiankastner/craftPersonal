@@ -1,28 +1,7 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <!-- META VIEWPORT -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% extends "_layout" %}
 
-    <!-- TITLE -->
-    <title>Christian Kastner | Seattle Software Engineer</title>
-
-    <!-- DESCRIPTION -->
-    <meta name="description" content="Frontend Software Engineer with a quantitative background, who loves building creative and interactive software">
-    
-    <!-- AUOTHOR -->
-    <meta name="author" content="Christian Kastner">
-
-    <!-- FAVICON -->
-    <link rel="shortcut icon" type="image/ico" href="" />
-    <!-- SCRIPTS -->
-    <script src="{{ siteUrl }}/assets/index.js"></script>
-    <link rel="stylesheet" href="{{ siteUrl }}/assets/style.css">
-  </head>
-  <body>
+{% block content %}
     <div class="content">
-
       <header>
           <img src="">
           <svg id="menu-btn" viewBox="0 0 100 80" width="40" height="40">
@@ -89,11 +68,6 @@
 
         <section class="projects" id="projects">
             <ul>
-            {% for block in matrixBlocks %}
-                <li>
-                  {{ block  }}
-                </li>
-            {% endfor %}
             </ul>
         </section>
   
@@ -111,5 +85,4 @@
         </ul>
         </footer>
     </div>
-  </body>
-</html>
+{% endblock %}
