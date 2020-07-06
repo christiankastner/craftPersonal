@@ -11,7 +11,7 @@
         <!-- DESCRIPTION -->
         <meta name="description" content="Frontend Software Engineer with a quantitative background, who loves building creative and interactive software">
         
-        <!-- AUOTHOR -->
+        <!-- AUTHOR -->
         <meta name="author" content="Christian Kastner">
 
         <!-- FAVICON -->
@@ -21,10 +21,55 @@
         <link rel="stylesheet" href="{{ siteUrl }}/assets/style.css">
     </head>
     <body>
+    <header>
+          <img src="">
+          <svg id="menu-btn" viewBox="0 0 100 80" width="40" height="40">
+            <rect width="100" height="20"></rect>
+            <rect y="30" width="100" height="20"></rect>
+            <rect y="60" width="100" height="20"></rect>
+          </svg>
+          <nav id="nav">
+          <ul>
+              <li>
+                  <a class="link-transition" href="{{ siteUrl }}about">
+                  About
+                  </a>
+              </li>
+              <li>
+                  <a class="link-transition" href="{{ siteUrl }}projects">
+                  Work
+                  </a>
+              </li>
+              <li>
+                  <a href="https://learn.co/concurrent-compressor-4752/resume" >
+                  Resume
+                  </a>
+              </li>
+              <li>
+                  <a href="https://www.linkedin.com/in/christian-kastner/" >
+                  LinkedIn
+                  </a>
+              </li>
+          </ul>
+        </nav>
+      </header>
 
     {% block content %}
-    
+
     {% endblock %}
+    <footer>
+        <ul class="footer-links">
+            <li>
+                <a href="https://github.com/christiankastner" title="Github"><i class="fab fa-github"></i></a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/christianmkast/" title="Instagram"><i class="fab fa-instagram"></i></a>
+            </li>
+            <li>
+                <a href="https://dev.to/ckastner12" title="Blog"><i class="fas fa-blog"></i></a>
+            </li>
+        </ul>
+    </footer>
 
     </body>
 </html>
