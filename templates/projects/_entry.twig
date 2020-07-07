@@ -1,4 +1,9 @@
 {% extends "_layout" %}
 {% block content %}
-    hello from individual projects
+    <h1>{{entry.type}}</h1>
+    {% for element in entry.project %}
+    <p>
+        {% include "projects/_project/" ~ element.type %}
+    </p>
+    {% endfor %}
 {% endblock %}

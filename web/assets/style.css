@@ -1,3 +1,4 @@
+{{ scss }}
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 :root {
   --background: rgb(255,255,255);
@@ -36,23 +37,10 @@ header, footer {
   width: 100%;
 }
 
-footer, .skills {
+footer {
   justify-content: center;
   text-align: center;
   background-color: rgb(50, 50, 75);
-}
-
-.skills {
-  padding: 2em 2em 0;
-  color: var(--background);
-}
-
-.skills ul {
-  list-style-type: none;
-}
-
-.skills ul li p {
-  color: var(--background);
 }
 
 .link-transition {
@@ -366,7 +354,6 @@ header svg {
   #project-list {
     max-width: 875;
   }
-
 }
 
 @media only screen and (min-width: 1000px) {
