@@ -18,9 +18,13 @@
   },
   "homepage": "https://github.com/christiankastner/craftPersonal#readme",
   "devDependencies": {
+    "@babel/core": "^7.10.4",
+    "@babel/preset-env": "^7.10.4",
     "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-imagemin": "^7.1.0",
+    "gulp-rename": "^2.0.0",
     "gulp-sass": "^4.1.0",
     "gulp-uglify": "^3.0.2",
     "node-sass": "^4.14.1"
