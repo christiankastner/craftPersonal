@@ -14,7 +14,7 @@ sass.compiler = require('node-sass');
 var baseDir = "./src"
 var targetDir = "./web/assets"
 gulp.task('sass', function() {
-    return gulp.src(baseDir + "/sass/**/*.scss")
+    return gulp.src(baseDir + "/sass/**/main.scss")
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
         .pipe(gulp.dest(targetDir + "/css"))
 })

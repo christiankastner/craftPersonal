@@ -12,8 +12,6 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToAr
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
-console.log("hello");
-var ABOUT = ["I'm an interdisciplinary frontend engineer with a passion for design and creativity. I love creating interesting and unique experiences through software and working with designers.", "I'm actively seeking new opportunities with companies that value developers with an eye for detail and design.", "See some work samples below. I think that Virtual Canvas is my best work, showcasing an understanding of difficult web technologies including websockets and cloud storage as well as displaying thoughtful design and a creative web experience.", "You can reach me at christianmkastner@gmail.com."];
 var PROJECTS = [// {
   //     title: "Beat Poems",
   //     img: "./assets/images/poems.png",
@@ -54,7 +52,7 @@ var PROJECTS = [// {
   // },
 ];
 var SKILLS = {
-  "Tech": ["React", "Redux", "Javascript", "Rails", "Sockets", "ActionCable", "Ruby", "Python", "HTML5", "CSS3", "SASS/SCSS", "Jest", "MySQL", "PostgreSQL", "Heroku", "JWT", "Material UI", "Semantic UI", "Git & Github"],
+  "Tech": ["React", "Redux", "Javascript", "HTML5", "CSS3", "SASS/SCSS", "Jest", "Gulp", "Webpack", "Rails", "ActionCable", "Ruby", "Python", "MySQL", "PostgreSQL", "Heroku", "Git & Github"],
   "Data": ["R", "Matlab", "SciKit Learn", "Pandas", "Matplotlib", "Numerical Analysis"],
   "Creative": ["Photoshop", "Illustrator", "XD", "Lightroom", "P5.js", "Mo.js", "Processing in Java"]
 };

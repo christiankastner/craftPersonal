@@ -1,17 +1,17 @@
 {% extends "_layout" %}
 {% block content %}
-
+    <main>
     {% set myEntryQuery = craft.entries()
     .section('projects')
     .limit(10)
      %}
     {% set entries = myEntryQuery.all() %}
     {% for item in entries %}
-        <div>
-            <h2>{{ item.type }}</h2>
+        <div class="projectCard">
             {% for element in item.project %}
                 {% include "projects/_project/" ~ element.type %}
             {% endfor %}
         </div>
     {% endfor %}
+    </main>
 {% endblock %}

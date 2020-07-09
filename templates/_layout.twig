@@ -22,36 +22,36 @@
     </head>
     <body>
     <header>
-          <img src="">
-          <svg id="menu-btn" viewBox="0 0 100 80" width="40" height="40">
+          <img class="headerLogo" src="">
+          <svg class="hanburger" id="menu-btn" viewBox="0 0 100 80" width="40" height="40">
             <rect width="100" height="20"></rect>
             <rect y="30" width="100" height="20"></rect>
             <rect y="60" width="100" height="20"></rect>
           </svg>
           <nav id="nav">
-          <ul>
-              <li>
+          <ul class="navLinks">
+              <li class="navLinks__item">
                   <a class="link-transition" href="{{ siteUrl }}">
                   Home
                   </a>
               </li>
-              <li>
-                  <a class="link-transition" href="{{ siteUrl }}about">
+              <li class="navLinks__item">
+                  <a class="navLinks__item__link" href="{{ siteUrl }}about">
                   About
                   </a>
               </li>
-              <li>
-                  <a class="link-transition" href="{{ siteUrl }}projects">
+              <li class="navLinks__item">
+                  <a class="navLinks__item__link" href="{{ siteUrl }}projects">
                   Work
                   </a>
               </li>
-              <li>
-                  <a href="https://learn.co/concurrent-compressor-4752/resume" >
+              <li class="navLinks__item">
+                  <a class="navLinks__item__link" href="https://learn.co/concurrent-compressor-4752/resume" >
                   Resume
                   </a>
               </li>
-              <li>
-                  <a href="https://www.linkedin.com/in/christian-kastner/" >
+              <li class="navLinks__item">
+                  <a class="navLinks__item__link" href="https://www.linkedin.com/in/christian-kastner/" >
                   LinkedIn
                   </a>
               </li>
@@ -63,15 +63,15 @@
 
     {% endblock %}
     <footer>
-        <ul class="footer-links">
-            <li>
-                <a href="https://github.com/christiankastner" title="Github"><i class="fab fa-github"></i></a>
+        <ul class="footerLinks">
+            <li class="footerLinks__item">
+                <a class="footerLinks__item__link" href="https://github.com/christiankastner" title="Github"><i class="fab fa-github"></i></a>
             </li>
-            <li>
-                <a href="https://www.instagram.com/christianmkast/" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <li class="footerLinks__item">
+                <a class="footerLinks__item__link" href="https://www.instagram.com/christianmkast/" title="Instagram"><i class="fab fa-instagram"></i></a>
             </li>
-            <li>
-                <a href="https://dev.to/ckastner12" title="Blog"><i class="fas fa-blog"></i></a>
+            <li class="footerLinks__item">
+                <a class="footerLinks__item__link"href="https://dev.to/ckastner12" title="Blog"><i class="fas fa-blog"></i></a>
             </li>
         </ul>
     </footer>
