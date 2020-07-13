@@ -10,7 +10,6 @@ var babel = require('gulp-babel');
 
 sass.compiler = require('node-sass');
 
-
 var baseDir = "./src"
 var targetDir = "./web/assets"
 gulp.task('sass', function() {
@@ -37,6 +36,12 @@ gulp.task('js', function() {
 
 gulp.task('js:watch', function() {
     gulp.watch(baseDir + '/js/**/*.js', gulp.series('js'))
+})
+
+gulp.task('watch', function() {
+    gulp.watch(baseDir + '/js/**/*.js', gulp.series('js'))
+    gulp.watch(baseDir + '/**/*.scss', gulp.series('sass'));
+    gulp.watch(baseDir + '/images/*', gulp.series('imagemin'))
 })
 
 gulp.task('imagemin', function() {

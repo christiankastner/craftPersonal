@@ -1,10 +1,10 @@
 {% extends "_layout" %}
   {% block content %}
   <div class="content">
-      <section id="landing">
+      <section >
         <div class="landing">
-          <div class="landing-card">
-            <div class="card-text">
+          <div class="landing__card">
+            <div class="landing__card__text">
                 <h3>
                   Christian Kastner
                 </h3>
@@ -14,23 +14,17 @@
                 </span>
             </div>
           </div> 
-          <img src="./assets/images/portrait.png" alt="line portrait"/> 
+          <img class="landing__img" src="./assets/images/portrait.png" alt="line portrait"/> 
         </div>
       </section>
-      <section class="about" id="about">
+      <section >
+        <div class="blurbCard" id="about-card">
         <img src="./assets/images/perlin.png" alt="flowing line art"/>
-        
-        <div class="about-card" id="about-card">
-            <h3>About</h3>
-            <div class="text-card">
-              <p>{{ entry.paragraphText }}</p>
+            <div class="blurbCard__textContent">
+              <h3 class="blurbCard__textContent__title">Hello</h3>
+              <p class="blurbCard__textContainer__text">{{ entry.paragraphText }}</p>
             </div>
         </div>
       </section>
-
-        <section class="projects" id="projects">
-            <ul>
-            </ul>
-        </section>
     </div>
   {% endblock %}

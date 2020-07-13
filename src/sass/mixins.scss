@@ -10,7 +10,37 @@ $screen-lg-min: 992px;
 // Large tablets and desktops
 $screen-xl-min: 1200px;
 
+@mixin phone {
+    @media (min-width: $screen-sm-min) {
+        @content
+    }
+};
+@mixin tablet {
+    @media (min-width: $screen-md-min) {
+        @content
+    }
+};
+@mixin desktop {
+    @media (min-width: $screen-lg-min) {
+        @content
+    }
+};
+@mixin desktopLg {
+    @media (min-width: $screen-xl-min) {
+        @content
+    }
+};
 
+@keyframes scrollIn {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+}
+
+// Variables
 $background: rgb(255,255,255);
 $background-secondary: rgb(250,250,250);
 $nav: rgb(250,250,250);

@@ -17,13 +17,16 @@
         <!-- FAVICON -->
         <link rel="shortcut icon" type="image/ico" href="" />
         <!-- SCRIPTS -->
-        <script src="{{ siteUrl }}/assets/js/index.js"></script>
-        <link rel="stylesheet" href="{{ siteUrl }}/assets/css/main.css">
+
+        {% includeCssFile "assets/css/main.css" %}
+        {% includeJsFile "assets/js/index.js" %}
+        {# <script src="{{ siteUrl }}assets/js/index.js"></script> #}
+        {# <link rel="stylesheet" href="{{ siteUrl }}assets/css/main.css"> #}
     </head>
     <body>
     <header>
           <img class="headerLogo" src="">
-          <svg class="hanburger" id="menu-btn" viewBox="0 0 100 80" width="40" height="40">
+          <svg class="hamburger" id="menu-btn" viewBox="0 0 100 80" width="40" height="40">
             <rect width="100" height="20"></rect>
             <rect y="30" width="100" height="20"></rect>
             <rect y="60" width="100" height="20"></rect>

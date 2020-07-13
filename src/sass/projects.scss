@@ -1,6 +1,7 @@
+@import "./mixins.scss";
+
 .projectCard {
     width: 200px;
-    color: blue;
     &__title {
         
     }
@@ -9,3 +10,14 @@
 
     }
 }
+
+@media only screen and (min-width: $screen-lg-min) {
+    .project-card {
+      margin: 0 80px;
+      padding: 2em 100px;
+    }
+  
+    .project-card img {
+      margin: 0 1em 2em;
+    }
+  }

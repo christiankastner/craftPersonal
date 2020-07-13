@@ -12,6 +12,7 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToAr
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
+console.log("hello");
 var PROJECTS = [// {
   //     title: "Beat Poems",
   //     img: "./assets/images/poems.png",
@@ -103,76 +104,60 @@ document.addEventListener('DOMContentLoaded', function () {
   });
   var about = document.getElementById("text-card");
   var projectList = document.getElementById("project-list");
-  var skillList = document.getElementById("skill-list"); // Populate about section
-
-  (function () {
-    ABOUT.map(function (paragraph) {
-      var p = document.createElement("p");
-      p.innerText = paragraph;
-      about.appendChild(p);
-    });
-  })(); // Populate project list
-
-
-  (function () {
-    PROJECTS.map(function (project) {
-      li = document.createElement("li");
-      li.className = "project-card";
-      img = document.createElement("img");
-      img.src = project.img;
-      img.alt = "".concat(project.title, " picture");
-      div = document.createElement("div");
-      div.className = "project-header";
-      h3 = document.createElement("h3");
-      h3.innerText = project.title;
-      h4 = document.createElement("h4");
-      h4.innerText = project.meta;
-      demo = document.createElement("a");
-      demo.innerText = "Live Site" || "Not Deployed, Currently Developing";
-
-      if (project.active) {
-        demo.href = project.active;
-      }
-
-      frontend = document.createElement("a");
-      project.github.frontend ? frontend.innerText = "Frontend" : "";
-      frontend.href = project.github.frontend;
-      backend = document.createElement("a");
-      project.github.backend ? backend.innerText = "Backend" : backend.href = project.github.backend;
-      links = renderLinks(demo, frontend, backend);
-      gradient = document.createElement("div");
-      gradient.className = "gradient";
-      div.append(h3, h4, links);
-      tags = document.createElement("div");
-      tags.innerHTML = project.tags.map(function (x) {
-        return "<span>" + x + "</span>";
-      }).join(" - ");
-      tags.classList.add("tags");
-      var p = document.createElement("p");
-      p.innerText = project.description;
-      iframe = renderDemo(project.demo);
-      container = document.createElement("div");
-      container.className = "text-container";
-      container.append(iframe);
-      li.append(img, div, p, container, tags, gradient);
-      projectList.appendChild(li);
-    });
-  })(); // Populate Skills
-
-
-  (function () {
-    for (var title in SKILLS) {
-      var _li = document.createElement("li");
-
-      var _h = document.createElement("h4");
-
-      _h.innerText = title;
-      var p = document.createElement("p");
-      p.innerText = SKILLS[title].join(", ");
-
-      _li.append(_h, p);
-
-      skillList.appendChild(_li);
-    }
-  })();
+  var skillList = document.getElementById("skill-list"); // Populate project list
+  // (function() {
+  //     PROJECTS.map(project => {
+  //         li = document.createElement("li")
+  //         li.className = "project-card"
+  //         img = document.createElement("img")
+  //         img.src = project.img
+  //         img.alt = `${project.title} picture`
+  //         div = document.createElement("div")
+  //         div.className = "project-header"
+  //         h3 = document.createElement("h3")
+  //         h3.innerText = project.title
+  //         h4 = document.createElement("h4")
+  //         h4.innerText = project.meta
+  //         demo = document.createElement("a")
+  //         demo.innerText = "Live Site" || "Not Deployed, Currently Developing"
+  //         if (project.active) {
+  //             demo.href = project.active
+  //         }
+  //         frontend = document.createElement("a")
+  //         project.github.frontend ? frontend.innerText = "Frontend" : ""
+  //         frontend.href = project.github.frontend
+  //         backend = document.createElement("a")
+  //         project.github.backend ? backend.innerText = "Backend" : 
+  //         backend.href = project.github.backend
+  //         links = renderLinks(demo, frontend, backend)
+  //         gradient = document.createElement("div")
+  //         gradient.className = "gradient"
+  //         div.append(h3,h4,links)
+  //         tags = document.createElement("div")
+  //         tags.innerHTML = project.tags.map(function(x) {
+  //             return "<span>" + x + "</span>"
+  //         }).join(" - ")
+  //         tags.classList.add("tags")
+  //         const p = document.createElement("p")
+  //         p.innerText = project.description
+  //         iframe = renderDemo(project.demo)
+  //         container = document.createElement("div")
+  //         container.className = "text-container"
+  //         container.append(iframe)
+  //         li.append(img,div,p,container,tags,gradient)
+  //         projectList.appendChild(li)
+  //     })
+  // })(); 
+  // Populate Skills
+  // (function() {
+  //     for (const title in SKILLS) {
+  //         let li = document.createElement("li")
+  //         let h4 = document.createElement("h4")
+  //         h4.innerText = title
+  //         let p = document.createElement("p")
+  //         p.innerText = SKILLS[title].join(", ")
+  //         li.append(h4, p)
+  //         skillList.appendChild(li)
+  //     }
+  // })();
 });

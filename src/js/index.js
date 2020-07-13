@@ -1,3 +1,4 @@
+console.log("hello") 
 const PROJECTS = [
     // {
     //     title: "Beat Poems",
@@ -90,86 +91,77 @@ document.addEventListener('DOMContentLoaded', function() {
     var projectList = document.getElementById("project-list");
     var skillList = document.getElementById("skill-list");
 
-    // Populate about section
-    (function() {
-        ABOUT.map(paragraph => {
-            const p = document.createElement("p")
-            p.innerText = paragraph
-            about.appendChild(p)
-        })
-    })();
-
     // Populate project list
-    (function() {
-        PROJECTS.map(project => {
-            li = document.createElement("li")
-            li.className = "project-card"
+    // (function() {
+    //     PROJECTS.map(project => {
+    //         li = document.createElement("li")
+    //         li.className = "project-card"
 
-            img = document.createElement("img")
-            img.src = project.img
-            img.alt = `${project.title} picture`
+    //         img = document.createElement("img")
+    //         img.src = project.img
+    //         img.alt = `${project.title} picture`
 
-            div = document.createElement("div")
-            div.className = "project-header"
+    //         div = document.createElement("div")
+    //         div.className = "project-header"
 
-            h3 = document.createElement("h3")
-            h3.innerText = project.title
-            h4 = document.createElement("h4")
-            h4.innerText = project.meta
-            demo = document.createElement("a")
-            demo.innerText = "Live Site" || "Not Deployed, Currently Developing"
-            if (project.active) {
-                demo.href = project.active
-            }
+    //         h3 = document.createElement("h3")
+    //         h3.innerText = project.title
+    //         h4 = document.createElement("h4")
+    //         h4.innerText = project.meta
+    //         demo = document.createElement("a")
+    //         demo.innerText = "Live Site" || "Not Deployed, Currently Developing"
+    //         if (project.active) {
+    //             demo.href = project.active
+    //         }
 
-            frontend = document.createElement("a")
-            project.github.frontend ? frontend.innerText = "Frontend" : ""
-            frontend.href = project.github.frontend
+    //         frontend = document.createElement("a")
+    //         project.github.frontend ? frontend.innerText = "Frontend" : ""
+    //         frontend.href = project.github.frontend
 
-            backend = document.createElement("a")
-            project.github.backend ? backend.innerText = "Backend" : 
-            backend.href = project.github.backend
+    //         backend = document.createElement("a")
+    //         project.github.backend ? backend.innerText = "Backend" : 
+    //         backend.href = project.github.backend
 
-            links = renderLinks(demo, frontend, backend)
+    //         links = renderLinks(demo, frontend, backend)
 
-            gradient = document.createElement("div")
-            gradient.className = "gradient"
-            div.append(h3,h4,links)
+    //         gradient = document.createElement("div")
+    //         gradient.className = "gradient"
+    //         div.append(h3,h4,links)
 
-            tags = document.createElement("div")
+    //         tags = document.createElement("div")
 
-            tags.innerHTML = project.tags.map(function(x) {
-                return "<span>" + x + "</span>"
-            }).join(" - ")
+    //         tags.innerHTML = project.tags.map(function(x) {
+    //             return "<span>" + x + "</span>"
+    //         }).join(" - ")
 
-            tags.classList.add("tags")
+    //         tags.classList.add("tags")
 
-            const p = document.createElement("p")
-            p.innerText = project.description
-            iframe = renderDemo(project.demo)
+    //         const p = document.createElement("p")
+    //         p.innerText = project.description
+    //         iframe = renderDemo(project.demo)
 
-            container = document.createElement("div")
-            container.className = "text-container"
-            container.append(iframe)
+    //         container = document.createElement("div")
+    //         container.className = "text-container"
+    //         container.append(iframe)
 
-            li.append(img,div,p,container,tags,gradient)
-            projectList.appendChild(li)
-        })
-    })();
+    //         li.append(img,div,p,container,tags,gradient)
+    //         projectList.appendChild(li)
+    //     })
+    // })(); 
 
     // Populate Skills
-    (function() {
-        for (const title in SKILLS) {
-            let li = document.createElement("li")
+    // (function() {
+    //     for (const title in SKILLS) {
+    //         let li = document.createElement("li")
             
-            let h4 = document.createElement("h4")
-            h4.innerText = title
+    //         let h4 = document.createElement("h4")
+    //         h4.innerText = title
 
-            let p = document.createElement("p")
-            p.innerText = SKILLS[title].join(", ")
+    //         let p = document.createElement("p")
+    //         p.innerText = SKILLS[title].join(", ")
 
-            li.append(h4, p)
-            skillList.appendChild(li)
-        }
-    })();
+    //         li.append(h4, p)
+    //         skillList.appendChild(li)
+    //     }
+    // })();
 })

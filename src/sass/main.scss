@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 @import "./projects.scss";
 @import "./about.scss";
+@import "./home.scss";
 @import "./navBar.scss";
 @import "./mixins.scss";
 
@@ -27,6 +28,18 @@ header {
   top: 0;
   left: 0;
   position: sticky;
+
+  svg {
+    @include tablet {
+      display: none;
+    }
+  }
+
+  nav {
+    @include tablet {
+      display: unset;
+    }
+  }
 }
 
 .content {
@@ -48,22 +61,6 @@ h3 {
   margin-bottom: .5em;
   text-transform: uppercase;
   font-size: 1.25em;
-}
-
-.about {
-  margin-top: 2em;
-  padding: 4em 2em 0;
-}
-
-.about img {
-  object-fit: stretch;
-  height: 100%;
-  width: 100%;
-}
-
-.about-card {
-  background: $background;
-  padding: .5em 2em;
 }
 
 h4 {
@@ -198,50 +195,6 @@ header svg {
 
 @media only screen and (min-width: $screen-md-min){
 
-  header svg {
-    display: none;
-  }
-
-  nav {
-    display: unset;
-  }
-
-  nav ul {
-    flex-direction: row;
-  }
-
-  .landing {
-    padding: 0 1em;
-    grid-template-columns: 4fr 2fr 2fr;
-    grid-template-rows: 1fr 3fr;
-  }
-
-  .about {
-    width: 90vw;
-    height: 50vw;
-    padding: 4em 2em 0;
-    display: grid;
-    grid-template-columns: 1.5fr 1fr 4fr ;
-    grid-template-rows: 1fr 3.5fr 1fr;
-  }
-  
-  .about img {
-    grid-column: 2 / 4;
-    grid-row: 1 / 4;
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-  }
-  
-  .about-card {
-    grid-row: 1 / 3;
-    grid-column: 1 / 3;
-    background: $background;
-    padding: .5em 2em;
-    z-index: 1;
-    overflow: auto;
-  }
-
   .project-card {
     margin: 0 5em;
     padding: 2em 3em;
@@ -249,10 +202,6 @@ header svg {
   
   .project-card p {
     font-size: 14px;
-  }
-
-  header li {
-    font-size: 1em;
   }
 
   .skills {
@@ -266,25 +215,5 @@ header svg {
 
   #project-list {
     max-width: 875;
-  }
-}
-
-@media only screen and (min-width: $screen-lg-min) {
-  .project-card {
-    margin: 0 80px;
-    padding: 2em 100px;
-  }
-
-  .project-card img {
-    margin: 0 1em 2em;
-  }
-}
-
-@keyframes scrollIn {
-  from {
-    transform: translateY(-100%);
-  }
-  to {
-    transform: translateY(0);
   }
 }

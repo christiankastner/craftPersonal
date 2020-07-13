@@ -29,6 +29,9 @@
     text-transform: uppercase;
     letter-spacing: .25em;
 
+    @include tablet {
+        flex-direction: row;
+    }
     &__item {
         font-size: .75em;
         display: inline-block;
@@ -47,4 +50,8 @@
             color: $accent;
         }
     }
+}
+
+header li {
+    font-size: 1em;
 }
