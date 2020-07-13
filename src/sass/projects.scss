@@ -7,46 +7,11 @@
     }
 
     &__img {
-
+      width: 260px;
+      height: auto;
     }
 }
 
 .tags {
   text-align: center;
 }
-
-@media only screen and (min-width: $screen-lg-min) {
-    .project-card {
-      margin: 0 80px;
-      padding: 2em 100px;
-    }
-  
-    .project-card img {
-      margin: 0 1em 2em;
-    }
-  }
-
-  @media only screen and (min-width: $screen-md-min){
-
-    .project-card {
-      margin: 0 5em;
-      padding: 2em 3em;
-    }
-    
-    .project-card p {
-      font-size: 14px;
-    }
-  
-    .skills {
-      display: flex;
-      justify-content: space-evenly;
-    }
-  
-    .skills ul {
-      width: 600px;
-    }
-  
-    #project-list {
-      max-width: 875;
-    }
-  }

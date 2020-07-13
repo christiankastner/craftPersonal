@@ -1,13 +1,11 @@
 {% extends "_layout" %}
 {% block content %}
-    <main>
         <div class="projectPage">
         <h1 class="projectPage__title">{{entry.slug}}</h1>
         {% for element in entry.project %}
         <p>
-            {% include "projects/_project/" ~ element.type %}
+            {% include "work/_project/" ~ element.type %}
         </p>
         {% endfor %}
         </div>
-    </main>
 {% endblock %}
