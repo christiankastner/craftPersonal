@@ -1,4 +1,44 @@
 @import "./mixins.scss";
+
+.navLinks {
+    list-style-type: none;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .25em;
+    display: flex;
+    flex-direction: column;
+    
+    @include tablet {
+        flex-direction: row;
+    }
+
+    &__item {
+        font-size: 1em;
+        display: inline-block;
+        margin: auto 0 1em;
+        @include tablet {
+
+            padding: 1em 1em;
+        }
+        &__link {
+            transition: all 0.7s ease;
+            text-decoration: none;
+            color: $text;
+            transition: all 0.3s ease 0s;
+            &--active {
+                color: $accent;
+            }
+        }
+        &__link:hover {
+            color: $accent;
+        }
+    }
+}
+
+.open-nav {
+    display: unset;
+}
+
 .footerLinks {
     justify-content: center;
     text-align: center;
@@ -12,46 +52,46 @@
     &__item {
         font-size: 2em;
         display: inline-block;
-        padding: .2em;
         &__link {
             transition: all 0.7s ease;
             color: $background;
             text-decoration: none;
             transition: all 0.3s ease 0s;
-            padding: 1em;
-        }
-    }
-}
-.headerLinks {
-    list-style-type: none;
-    text-align: center;
-    padding: 1em 0;
-    text-transform: uppercase;
-    letter-spacing: .25em;
-
-    @include tablet {
-        flex-direction: row;
-    }
-    &__item {
-        font-size: .75em;
-        display: inline-block;
-        padding: .2em;
-        &__link {
-            transition: all 0.7s ease;
-            color: $accent;
-            text-decoration: none;
-            transition: all 0.3s ease 0s;
-            padding: 1em;
-            &--active {
-
-            }
-        }
-        &__link:hover {
-            color: $accent;
         }
     }
 }
 
-header li {
-    font-size: 1em;
+header {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 10px rgba(0,0,0,.1);
+    background-color: $nav;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+  
+    svg {
+      padding: .75em;
+      width: 1.5em;
+      cursor: pointer;
+      margin-right: 1em;
+      @include tablet {
+        display: none;
+      }
+    }
+  
+    nav {
+        display: none;
+        position: relative;
+        top: 0;
+        @include tablet {
+            display: unset;
+        }
+    }
+
+    .open-nav {
+        display: unset;
+    }
 }

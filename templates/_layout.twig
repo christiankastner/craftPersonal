@@ -20,8 +20,6 @@
 
         {% includeCssFile "assets/css/main.css" %}
         {% includeJsFile "assets/js/index.js" %}
-        {# <script src="{{ siteUrl }}assets/js/index.js"></script> #}
-        {# <link rel="stylesheet" href="{{ siteUrl }}assets/css/main.css"> #}
     </head>
     <body>
     <header>
@@ -34,7 +32,7 @@
           <nav id="nav">
           <ul class="navLinks">
               <li class="navLinks__item">
-                  <a class="link-transition" href="{{ siteUrl }}">
+                  <a class="navLinks__item__link" href="{{ siteUrl }}">
                   Home
                   </a>
               </li>
@@ -62,9 +60,11 @@
         </nav>
       </header>
 
+    <main>
     {% block content %}
 
     {% endblock %}
+    </main>
     <footer>
         <ul class="footerLinks">
             <li class="footerLinks__item">

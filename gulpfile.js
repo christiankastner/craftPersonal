@@ -7,11 +7,13 @@ var uglify = require('gulp-uglify')
 var imagemin = require('gulp-imagemin')
 var rename = require('gulp-rename')
 var babel = require('gulp-babel');
+var browserSync = require("browser-sync")
 
 sass.compiler = require('node-sass');
 
 var baseDir = "./src"
 var targetDir = "./web/assets"
+var PORT = 80
 gulp.task('sass', function() {
     return gulp.src(baseDir + "/sass/**/main.scss")
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
