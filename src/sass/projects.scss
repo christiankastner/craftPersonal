@@ -1,15 +1,44 @@
 @import "./mixins.scss";
+$card-length: 16rem;
+
+.workContainer {
+  margin-bottom: 2em;
+  &__list {
+    display: grid;
+    grid-gap: 1em;
+    list-style: none;
+    grid-template-columns: repeat(auto-fit, minmax($card-length, 1fr));
+
+    &__item {
+      margin: 0 auto;
+      width: $card-length;
+    }
+  }
+}
 
 .projectCard {
-    width: 200px;
-    &__title {
-        
+    width: $card-length;
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: 0 0 .25em .25em;
+    cursor: pointer;
+    &__img {
+      width: 100%;
+      height: 100%;
+      border-bottom: 1px solid rgba(0,0,0,.1);
     }
 
-    &__img {
-      width: 260px;
-      height: auto;
+    &__title {
+        margin: .5em 0 .75em;
+        color: $text;
+        padding-left: 1em;
     }
+}
+
+.projectPage {
+
+  &__title {
+    text-align: left;
+  }
 }
 
 .tags {

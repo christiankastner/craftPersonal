@@ -1,11 +1,16 @@
 {% extends "_layout" %}
 {% block content %}
+    {% if entry.type == "project" %}
         <div class="projectPage">
-        <h1 class="projectPage__title">{{entry.slug}}</h1>
-        {% for element in entry.project %}
-        <p>
-            {% include "work/_project/" ~ element.type %}
-        </p>
-        {% endfor %}
+            <h1 class="projectPage__title">{{entry.title}}</h1>
+            {% for element in entry.project %}
+            <p>
+                {% include "work/_components/_project/" ~ element.type %}
+            </p>
+            {% endfor %}
         </div>
+    {% elseif entry.type == "sketch" %}
+        
+    {% endif %}
+    
 {% endblock %}

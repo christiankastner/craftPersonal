@@ -1,4 +1,3 @@
-console.log("hello") 
 const PROJECTS = [
     // {
     //     title: "Beat Poems",

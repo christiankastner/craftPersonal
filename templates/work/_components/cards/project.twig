@@ -2,7 +2,7 @@
 {% for element in item.project %}
         {% if element.projectImage %}
                 {% set image = element.projectImage.first %}
-                <img src="{{ image.getUrl('thumb') }}" width="{{ image.getWidth('thumb') }}" height="{{ image.getHeight('thumb') }}">
-                <h3>{{item.title}}</h3>
+                <img class="projectCard__img" src="{{ image.getUrl('thumb') }}" width="{{ image.getWidth('thumb') }}" height="{{ image.getHeight('thumb') }}">
+                <h4 class="projectCard__title">{{item.title}}</h4>
         {% endif %}
 {% endfor %}

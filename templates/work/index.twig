@@ -9,9 +9,11 @@
         <ul class="workContainer__list">
         {% for item in entries %}
             <li class="workContainer__list__item">
-                <div class="projectCard">
-                    {% include "work/_components/cards/" ~ item.type with item %}
-                </div>
+                <a href="{{siteUrl}}work/{{item.slug}}">
+                    <div class="projectCard">
+                        {% include "work/_components/cards/" ~ item.type with item %}
+                    </div>
+                </a>
             </li>
         {% endfor %}
         </ul>
