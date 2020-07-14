@@ -1,10 +1,8 @@
+
 {% for element in item.project %}
-<div class="projectCard">
-{# {% set image = element.projectImage.first %}
-    <img class="projectCard__img" src="{{ image.url }}" alt="{{image.title}}" > #}
-    <div class="projectCard__content">
-        <h4 class="projectCard__content__title">{{ element.projectTitle }}</h4>
-        <p class="projectCard__content__text">{{ element.projectDescription }}</p>
-    </div>
-</div>
+        {% if element.projectImage %}
+                {% set image = element.projectImage.first %}
+                <img src="{{ image.getUrl('thumb') }}" width="{{ image.getWidth('thumb') }}" height="{{ image.getHeight('thumb') }}">
+                <h3>{{item.title}}</h3>
+        {% endif %}
 {% endfor %}

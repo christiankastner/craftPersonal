@@ -5,9 +5,15 @@
     .limit(10)
      %}
     {% set entries = myEntryQuery.all() %}
-    {% for item in entries %}
-        <div class="projectCard">
-            {% include "work/_components/cards/" ~ item.type with item %}
-        </div>
-    {% endfor %}
+    <div class="workContainer" >
+        <ul class="workContainer__list">
+        {% for item in entries %}
+            <li class="workContainer__list__item">
+                <div class="projectCard">
+                    {% include "work/_components/cards/" ~ item.type with item %}
+                </div>
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
 {% endblock %}

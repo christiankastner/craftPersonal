@@ -1,0 +1,7 @@
+
+{% for element in item.sketch %}
+        {% if element.sketchImage %}
+                {% set image = element.sketchImage.first %}
+                <img src="{{ image.getUrl('thumb') }}" width="{{ image.getWidth('thumb') }}" height="{{ image.getHeight('thumb') }}">
+        {% endif %}
+{% endfor %}
