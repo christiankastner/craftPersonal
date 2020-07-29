@@ -7,17 +7,21 @@
     letter-spacing: .25em;
     display: flex;
     flex-direction: column;
+    margin: 0;
+    padding: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
     
     @include tablet {
+        display: inline-flex;
         flex-direction: row;
     }
 
     &__item {
         font-size: 1em;
         display: inline-block;
-        margin: auto 0 1em;
+        margin: 1em 0;
         @include tablet {
-
             padding: 1em 1em;
         }
         &__link {

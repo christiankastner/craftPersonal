@@ -36,9 +36,33 @@ $card-length: 16rem;
 }
 
 .projectPage {
-  
-  &__title {
-    text-align: left;
+  &__content {
+    margin: auto 2em;
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__text {
+
+      @include tablet {
+        width: 45%;
+      }
+      &__title {
+        text-align: left;
+        padding-bottom: .5em;
+        margin-bottom: .5em;
+        border-bottom: 1px solid $text;
+      }
+    }
+    &__img {
+      @include tablet {
+        width: 45%;
+      }
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
   }
 }
 

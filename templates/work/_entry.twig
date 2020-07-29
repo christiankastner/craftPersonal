@@ -3,12 +3,14 @@
     {% if entry.type == "project" %}
         <div class="projectPage">
             <div class="projectPage__content">
-                <h1 class="projectPage__content__title">{{entry.title}}</h1>
+                <div class="projectPage__content__text">
+                <h1 class="projectPage__content__text__title">{{entry.title}}</h1>
                 {{ entry.paragraphText }}
-            </div>
-            {% set image = entry.image.first %}
-            <div class="projectPage__img">
-                <img src="{{ image.url }}" alt="{{ image.title }}"
+                </div>
+                {% set image = entry.image.first %}
+                <div class="projectPage__content__img">
+                    <img src="{{ image.url }}" alt="{{ image.title }}" />
+                </div>
             </div>
         </div>
     {% elseif entry.type == "sketch" %}
