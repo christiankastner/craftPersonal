@@ -56,20 +56,18 @@
   overflow-x: hidden;
     @include tablet {
         width: auto;
-        display: grid;
-        grid-template-columns: 1fr 1fr 4fr ;
-        grid-template-rows: .5fr 2fr .5fr;
+        display: flex;
     }
 
     &__img {
         width: 100%;
-        height: auto;
+        height: 100%;
+        border-radius: 50%;
+        overflow: hidden;
         @include tablet {
             object-fit: contain;
             height: 100%;
             width: auto;
-            grid-column: 2 / 4;
-            grid-row: 2 / 4;
         }
     }
 
